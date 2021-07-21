@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.penjual">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Penjual">
+        <activity android:name=".view.barang.PembayaranBarangActivity"/>
+        <activity android:name=".view.barang.PesananBarangActivity" />
+        <activity
+            android:name=".view.DetailActivity"
+            android:theme="@style/Theme.Penjual.NoActionBar" />
+        <activity android:name=".view.barang.UpdateBarangActivity" />
+        <activity
+            android:name=".view.WebViewActivity"
+            android:theme="@style/Theme.Penjual.NoActionBar" />
+        <activity android:name=".view.barang.AddBarangActivity" />
+        <activity android:name=".view.penjual.UpdateActivity" />
+        <activity android:name=".view.penjual.SignupActivity" />
+        <activity android:name=".view.penjual.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.MainActivity" />
+
+        <receiver
+            android:name="com.example.receiver.ConnectivityReceiver"
+            android:enabled="true"
+            android:permission="TODO"
+            tools:ignore="ExportedReceiver">
+            <intent-filter>
+                <action android:name=".CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
